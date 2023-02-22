@@ -1,15 +1,22 @@
-
-import './ExpenseItem'
 import ExpenseItem from "./ExpenseItem";
-
 function Expenses(props){
-    const expenses=props.App.expenses
-
+    console.log(props)
+    const expenses =[
+        {
+            date : new Date(2023, 0, 10),
+            title : 'New book',
+            price : 30.99
+        },
+        {
+            date : new Date(2023, 0, 10),
+            title : 'New jeans',
+            price : 89.99
+        }]
     return(
-        // eslint-disable-next-line no-undef
-        <ExpenseItem expenseData={expenses[0]}></ExpenseItem>,
-            // eslint-disable-next-line no-undef
-    <ExpenseItem expenseData={expenses[1]}></ExpenseItem>
+        <div className='Expenses'>
+            <ExpenseItem expenseData={expenses[0]}></ExpenseItem>
+            <ExpenseItem expenseData={expenses[1]}></ExpenseItem>
+        </div>
     )
 }
-export default Expenses
+export default Expenses;
