@@ -1,5 +1,6 @@
 import ExpenseItem from "./ExpenseItem";
 import './Expenses.css'
+import Card from "./Card";
 function Expenses(props){
     console.log(props)
     const expenses =[
@@ -14,10 +15,10 @@ function Expenses(props){
             price : 89.99
         }]
     return(
-        <div className='Expenses'>
+        <Card className='Expenses'>
             <ExpenseItem expenseData={expenses[0]}></ExpenseItem>
             <ExpenseItem expenseData={expenses[1]}></ExpenseItem>
-        </div>
+        </Card>
     )
 }
 export default Expenses;
