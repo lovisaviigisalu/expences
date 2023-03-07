@@ -1,13 +1,24 @@
 import './App.css';
-//import Expenses from "./components/Expenses";
-import ExpenseItem from "./components/ExpenseItem";
-import Expenses from "./components/Expenses";
-function App(props) {
-    console.log(props)
 
+import Expenses from "./components/Expenses/Expenses";
+import NewExpense from "./components/NewExpense/NewExpense";
+const App = () => {
+
+    const expenses =[
+        {
+            date : new Date(2023, 0, 10),
+            title : 'New book',
+            price : 30.99
+        },
+        {
+            date : new Date(2023, 0, 10),
+            title : 'New jeans',
+            price : 89.99
+        }]
     return (
         <div className="App">
-            <Expenses></Expenses>
+            <NewExpense></NewExpense>
+            <Expenses expenses={expenses}></Expenses>
         </div>
     );
 }
